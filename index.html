@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam- JS</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="remixicon/remixicon.css" type="text/css">
+    <link rel="stylesheet" href="css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <section class="box">
+
+        <!-- Theme switcher -->
+        
+        <!--label with images and span to change color-->
+        <div class="theme">
+            <input type="checkbox" name="switcher" id="switcher-input" class="switcher-input">
+            <label class="switcher-label" for="switcher-input" id="themes">
+                <i class="ri-moon-clear-line"></i>
+                <span class="switcher-toggler"></span>
+                <i class="ri-sun-line"></i>
+            </label> 
+        </div>   
+
+        <!-- First page -->
+        <div class="center" id="startTest">
+            <div class="start">
+                <h4>Tast Your Knowledge of</h4>
+                <h1>Javascript</h1>
+                <div class="button" onclick="startTest()">Start Test</div>
+            </div>
+        </div>
+
+        <!-- Exam page -->
+        <div class="exam" id="exam">
+            <div class="head">
+                <h4>Questions : <span id="qno"></span></h4>
+            </div>
+            <div class="body">
+                <div class="question" id="question"></div>
+                <div class="options">
+                    <div class="row">
+                        <div class="w-2">
+                            <div class="opt" id="opt1" onclick="optSelected1(1)">
+                                A. Scripting Language
+                            </div>
+                        </div>
+                        <div class="w-2">
+                            <div class="opt" id="opt2" onclick="optSelected2(2)">
+                                B. Machinery language
+                            </div>
+                        </div>
+                        <div class="w-2">
+                            <div class="opt" id="opt3" onclick="optSelected3(3)">
+                                C. Both A & B
+                            </div>
+                        </div>
+                        <div class="w-2">
+                            <div class="opt" id="opt4" onclick="optSelected4(4)">
+                                D. Non of the above
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons for exam page -->
+        <div class="currentQue" id="currentQue"><span id="queNo"></span>/10</div>
+        <!-- <div class="button next" id="next" onclick="nextQuestion()">Next</div> -->
+        <div class="next" id="next">00:14</div>
+        <div class="timer"></div>
+        <div class="button next" id="submit" onclick="submitTest()">Submit</div>
+
+        <!-- Result page -->
+        <div class="result" id="result">
+            <h2 class="title">Obtained Result</h2>
+            <div class="content">
+                <div class="row center">
+                    <div class="w-4">
+                        <h4>Total questions </h4>
+                        <h4>Your Answers </h4>
+                        <h4>True Answers </h4>
+                        <h4>Wrong Answers </h4>
+                        <h4>Obtained Marks </h4>
+                        <h4>Percentage </h4>
+                        <h4>Grade </h4>
+                    </div>
+                    <div class="w-4 res">
+                        <h4>: <span>10</span></h4>
+                        <h4>: <span id="ans"></span></h4>
+                        <h4>: <span id="trueAns">8</span></h4>
+                        <h4>: <span id="wrongAns">0</span></h4>
+                        <h4>: <span id="obMarks">8</span></h4>
+                        <h4>: <span id="perce">95</span>0%</h4>
+                        <h4>: <span id="grade"></span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button for go home -->
+        <div class="button next" id="gohome" onclick="gotoHome()">Restart Test</div>
+
+    </section>
+
+    <script src="js/script.js" type="text/javascript"></script>
+
+</body>
+
+</html>
